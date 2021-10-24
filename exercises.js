@@ -41,6 +41,13 @@ Create a function rgbToHex that converts a hex color to its RGB equivalent follo
 const red = rgbToHex({ r: 255, g: 0, b: 0 });
 console.log(red); // prints #FF0000
 */
+function base10ToBase16(base10) {
+    return 'FF';
+}
+
+function rgbToHex(rgbObj) {
+    return ``
+}
 
 /*
 Exercise 3 - fetch a list of characters
@@ -49,12 +56,10 @@ Fetch a list of characters from a web API using the node-fetch package.
 
 What happens if the API is down? Will our test fail? Should our test fail?
 */
-function rgbToHex(rgbObj) {
-    return '#FF0000';
-}
 
 module.exports = {
     hexToRGB,
     base16ToBase10,
-    rgbToHex
+    rgbToHex,
+    base10ToBase16
 }
