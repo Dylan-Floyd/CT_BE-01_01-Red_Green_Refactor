@@ -22,7 +22,7 @@ function base16ToBase10(base16String) {
 
 function hexToRGB(rgbString) {
     return {
-        red: 255,
+        red: base16ToBase10(rgbString.slice(0, 2)),
         green: 0,
         blue: 0
     }
