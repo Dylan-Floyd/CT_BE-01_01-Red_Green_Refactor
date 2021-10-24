@@ -42,7 +42,7 @@ const red = rgbToHex({ r: 255, g: 0, b: 0 });
 console.log(red); // prints #FF0000
 */
 function base10ToBase16(base10) {
-    return 'FF';
+    return String(base10, 16);
 }
 
 function rgbToHex(rgbObj) {

@@ -56,4 +56,10 @@ describe('excersises tests', () => {
         const actual2 = base10ToBase16(240);
         expect(actual2).toEqual(expectation2);
     });
+
+    test('singleDigitB10ToB16 works', () => {
+        const expecation = 'F'
+        const actual = singleDigitB10ToB16(15);
+        expect(actual).toEqual(expecation);
+    });
 });
