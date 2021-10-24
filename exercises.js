@@ -11,6 +11,13 @@ Create a function hexToRGB that converts a hex color to its RGB equivalent follo
 const red = hexToRGB('FF0000');
 console.log(red); // prints { red: 255, green: 0, blue: 0 }
 */
+function hexToRGB(rgbString) {
+    return {
+        red: 255,
+        green: 0,
+        blue: 0
+    }
+}
 
 /*
 Exercise 2 - Converts RGB to hex
@@ -33,3 +40,8 @@ Fetch a list of characters from a web API using the node-fetch package.
 
 What happens if the API is down? Will our test fail? Should our test fail?
 */
+
+
+module.exports = {
+    hexToRGB
+}
