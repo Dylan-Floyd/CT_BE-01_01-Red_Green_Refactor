@@ -41,12 +41,15 @@ Create a function rgbToHex that converts a hex color to its RGB equivalent follo
 const red = rgbToHex({ r: 255, g: 0, b: 0 });
 console.log(red); // prints #FF0000
 */
+function singleDigitB10ToB16(b10) {
+    return 'F'
+}
+
 function base10ToBase16(base10) {
-    return String(base10, 16);
 }
 
 function rgbToHex(rgbObj) {
-    return ``
+    return `FF`;
 }
 
 /*
@@ -61,5 +64,6 @@ module.exports = {
     hexToRGB,
     base16ToBase10,
     rgbToHex,
-    base10ToBase16
+    base10ToBase16,
+    singleDigitB10ToB16
 }
