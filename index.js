@@ -1,7 +1,5 @@
 console.log('hello world');
 
-function myFunc() {
+export function myFunc() {
 
 }
-
-module.exports = myFunc;

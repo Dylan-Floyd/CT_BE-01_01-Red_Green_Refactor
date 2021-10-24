@@ -3,13 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "test": "jest --verbose --runInBand --testLocationInResults --setupFiles"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --runInBand --testLocationInResults --setupFiles"
   },
   "jest": {
-    "testEnvironment": "node"
+    "roots": [
+      "__tests__"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "transform": {}
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1",
+    "node-fetch": "^3.0.0"
+  }
 }

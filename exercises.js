@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 /*
 Exercise 1 - Convert hex colors to RGB
 
@@ -11,7 +13,7 @@ Create a function hexToRGB that converts a hex color to its RGB equivalent follo
 const red = hexToRGB('FF0000');
 console.log(red); // prints { red: 255, green: 0, blue: 0 }
 */
-function base16ToBase10(base16String) {
+export function base16ToBase10(base16String) {
     //I thought I could do Number('F') and do more math from there.
     //That didn't work so I googled how to convert a string to a
     //number in js, and the first result gave the full answer to this.
@@ -20,7 +22,7 @@ function base16ToBase10(base16String) {
     return parseInt(base16String, 16);
 }
 
-function hexToRGB(hexString) {
+export function hexToRGB(hexString) {
     return {
         red: base16ToBase10(hexString.slice(0, 2)),
         green: base16ToBase10(hexString.slice(2, 4)),
@@ -41,7 +43,7 @@ Create a function rgbToHex that converts a hex color to its RGB equivalent follo
 const red = rgbToHex({ r: 255, g: 0, b: 0 });
 console.log(red); // prints #FF0000
 */
-function singleDigitB10ToB16(b10) {
+export function singleDigitB10ToB16(b10) {
     let b16 = '';
     //There's probably a better way to do this but I didn't want to google it this time
     switch(b10) {
@@ -97,13 +99,13 @@ function singleDigitB10ToB16(b10) {
     return b16;
 }
 
-function base10ToBase16(base10) {
+export function base10ToBase16(base10) {
     const digit1 = singleDigitB10ToB16(Math.floor(base10/16));
     const digit2 = singleDigitB10ToB16(base10%16);
     return `${digit1}${digit2}`;
 }
 
-function rgbToHex(rgbObj) {
+export function rgbToHex(rgbObj) {
     const r = base10ToBase16(rgbObj.r);
     const g = base10ToBase16(rgbObj.g);
     const b = base10ToBase16(rgbObj.b);
@@ -117,15 +119,7 @@ Fetch a list of characters from a web API using the node-fetch package.
 
 What happens if the API is down? Will our test fail? Should our test fail?
 */
-async function getCharacters() {
-    return [{ bob: 'bob' }];
-}
-
-module.exports = {
-    hexToRGB,
-    base16ToBase10,
-    rgbToHex,
-    base10ToBase16,
-    singleDigitB10ToB16,
-    getCharacters
+export async function getCharacters() {
+    const resp = await fetch('https://futuramaapi.herokuapp.com/api/characters/');
+    return resp.body;
 }

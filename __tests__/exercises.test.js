@@ -1,9 +1,10 @@
-const { hexToRGB,
+import {jest} from '@jest/globals';
+import { hexToRGB,
     base16ToBase10,
     rgbToHex,
     base10ToBase16,
     singleDigitB10ToB16,
-    getCharacters } = require('../exercises.js');
+    getCharacters } from '../exercises.js';
 
 describe('excersises tests', () => {
     test('excersise 1 hexToRGB', () => {
@@ -74,7 +75,7 @@ describe('excersises tests', () => {
 
     test('exercise 3 list of characters', async () => {
         const actual = await getCharacters();
-        //no idea if this actual works.
+        //no idea if this actually works.
         expect(actual).toEqual(expect.arrayContaining([expect.any(Object)]));
     });
 });
