@@ -74,8 +74,20 @@ describe('excersises tests', () => {
     });
 
     test('exercise 3 list of characters', async () => {
+        const expectation = {
+            Species: expect.any(String),
+            Age: expect.any(String),
+            Planet: expect.any(String),
+            Profession: expect.any(String),
+            Status: expect.any(String),
+            FirstAppearance: expect.any(String),
+            PicUrl: expect.any(String),
+            Relatives: expect.any(String),
+            VoicedBy: expect.any(String),
+            Name: expect.any(String)
+        }
         const actual = await getCharacters();
         //no idea if this actually works.
-        expect(actual).toEqual(expect.arrayContaining([expect.any(Object)]));
+        expect(actual).toEqual(expect.arrayContaining([expectation]));
     });
 });
