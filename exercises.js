@@ -11,6 +11,10 @@ Create a function hexToRGB that converts a hex color to its RGB equivalent follo
 const red = hexToRGB('FF0000');
 console.log(red); // prints { red: 255, green: 0, blue: 0 }
 */
+function base16ToBase10(base16String) {
+    return 16;
+}
+
 function hexToRGB(rgbString) {
     return {
         red: 255,
@@ -43,5 +47,6 @@ What happens if the API is down? Will our test fail? Should our test fail?
 
 
 module.exports = {
-    hexToRGB
+    hexToRGB,
+    base16ToBase10
 }
