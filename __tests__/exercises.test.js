@@ -28,4 +28,13 @@ describe('excersises tests', () => {
         const actual2 = base16ToBase10('a');
         expect(actual2).toEqual(expectation2);
     });
+
+    test('excersise 2 rgbToHex', () => {
+        const expectation = '#FF0000';
+        const actual = rgbToHex({
+            r: 255,
+            g: 0,
+            b: 0
+        });
+    });
 });
