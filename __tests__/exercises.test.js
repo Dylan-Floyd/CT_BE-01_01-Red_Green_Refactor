@@ -46,4 +46,9 @@ describe('excersises tests', () => {
         });
         expect(actual2).toEqual(expectation2);
     });
+
+    test('base10ToBase16 works', () => {
+        const expectation = 'FF';
+        const actual = base10ToBase16(255);
+    });
 });
