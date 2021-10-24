@@ -120,6 +120,8 @@ Fetch a list of characters from a web API using the node-fetch package.
 What happens if the API is down? Will our test fail? Should our test fail?
 */
 export async function getCharacters() {
-    const resp = await fetch('https://futuramaapi.herokuapp.com/api/characters/');
-    return resp.body;
+    const resp = await fetch('https://futuramaapi.herokuapp.com/api/v2/characters');
+    const json = await resp.json();
+    console.log(json);
+    return json;
 }
