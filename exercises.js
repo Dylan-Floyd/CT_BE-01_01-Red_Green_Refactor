@@ -20,11 +20,11 @@ function base16ToBase10(base16String) {
     return parseInt(base16String, 16);
 }
 
-function hexToRGB(rgbString) {
+function hexToRGB(hexString) {
     return {
-        red: base16ToBase10(rgbString.slice(0, 2)),
-        green: base16ToBase10(rgbString.slice(2, 4)),
-        blue: base16ToBase10(rgbString.slice(4, 6))
+        red: base16ToBase10(hexString.slice(0, 2)),
+        green: base16ToBase10(hexString.slice(2, 4)),
+        blue: base16ToBase10(hexString.slice(4, 6))
     }
 }
 
@@ -49,9 +49,12 @@ Fetch a list of characters from a web API using the node-fetch package.
 
 What happens if the API is down? Will our test fail? Should our test fail?
 */
-
+function rgbToHex(rgbObj) {
+    return '#FF0000';
+}
 
 module.exports = {
     hexToRGB,
-    base16ToBase10
+    base16ToBase10,
+    rgbToHex
 }

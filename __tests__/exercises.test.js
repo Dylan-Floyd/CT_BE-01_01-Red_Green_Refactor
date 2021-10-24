@@ -1,4 +1,4 @@
-const { hexToRGB, base16ToBase10 } = require('../exercises.js')
+const { hexToRGB, base16ToBase10, rgbToHex } = require('../exercises.js')
 
 describe('excersises tests', () => {
     test('excersise 1 hexToRGB', () => {
