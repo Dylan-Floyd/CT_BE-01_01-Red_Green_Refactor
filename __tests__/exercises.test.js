@@ -10,9 +10,14 @@ describe('excersises tests', () => {
         const actual = hexToRGB('FF0000');
         expect(actual).toEqual(expectation);
     });
+
     test('base16ToBase10 works', () => {
-        const expectation = 16;
+        const expectation = 15;
         const actual = base16ToBase10('F');
         expect(actual).toEqual(expectation);
-    })
+        
+        const expectation2 = 10;
+        const actual2 = base16ToBase10('a');
+        expect(actual2).toEqual(expectation2);
+    });
 });

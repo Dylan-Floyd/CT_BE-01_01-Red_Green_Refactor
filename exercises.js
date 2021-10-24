@@ -12,7 +12,12 @@ const red = hexToRGB('FF0000');
 console.log(red); // prints { red: 255, green: 0, blue: 0 }
 */
 function base16ToBase10(base16String) {
-    return 16;
+    //I thought I could do Number('F') and do more math from there.
+    //That didn't work so I googled how to convert a string to a
+    //number in js, and the first result gave the full answer to this.
+    //Kind of bummed, I was excited to figure out how to handle
+    //multiple digits.
+    return parseInt(base16String, 16);
 }
 
 function hexToRGB(rgbString) {
