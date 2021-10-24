@@ -104,7 +104,10 @@ function base10ToBase16(base10) {
 }
 
 function rgbToHex(rgbObj) {
-    return `FF`;
+    const r = base10ToBase16(rgbObj.r);
+    const g = base10ToBase16(rgbObj.g);
+    const b = base10ToBase16(rgbObj.b);
+    return `#${r}${g}${b}`;
 }
 
 /*
