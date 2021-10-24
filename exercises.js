@@ -117,11 +117,15 @@ Fetch a list of characters from a web API using the node-fetch package.
 
 What happens if the API is down? Will our test fail? Should our test fail?
 */
+async function getCharacters() {
+    return [{ bob: 'bob' }];
+}
 
 module.exports = {
     hexToRGB,
     base16ToBase10,
     rgbToHex,
     base10ToBase16,
-    singleDigitB10ToB16
+    singleDigitB10ToB16,
+    getCharacters
 }

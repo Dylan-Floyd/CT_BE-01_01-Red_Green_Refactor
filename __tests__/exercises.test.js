@@ -2,7 +2,8 @@ const { hexToRGB,
     base16ToBase10,
     rgbToHex,
     base10ToBase16,
-    singleDigitB10ToB16 } = require('../exercises.js')
+    singleDigitB10ToB16,
+    getCharacters } = require('../exercises.js');
 
 describe('excersises tests', () => {
     test('excersise 1 hexToRGB', () => {
@@ -74,6 +75,6 @@ describe('excersises tests', () => {
     test('exercise 3 list of characters', async () => {
         const actual = await getCharacters();
         //no idea if this actual works.
-        expect(actual).toEqual(expect.arrayContainer([expect.any(Object)]));
+        expect(actual).toEqual(expect.arrayContaining([expect.any(Object)]));
     });
 });
