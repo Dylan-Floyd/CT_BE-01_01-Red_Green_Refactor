@@ -52,5 +52,8 @@ describe('excersises tests', () => {
         const actual = base10ToBase16(255);
         expect(actual).toEqual(expectation);
 
+        const expectation2 = 'F0';
+        const actual2 = base10ToBase16(240);
+        expect(actual2).toEqual(expectation2);
     });
 });
