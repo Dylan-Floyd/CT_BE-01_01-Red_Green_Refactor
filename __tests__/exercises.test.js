@@ -65,5 +65,9 @@ describe('excersises tests', () => {
         const expecation = 'F'
         const actual = singleDigitB10ToB16(15);
         expect(actual).toEqual(expecation);
+
+        const expectation2 = 'A';
+        const actual2 = singleDigitB10ToB16(10);
+        expect(actual2).toEqual(expectation2);
     });
 });
