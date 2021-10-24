@@ -1,4 +1,4 @@
-const { hexToRGB, base16ToBase10, rgbToHex } = require('../exercises.js')
+const { hexToRGB, base16ToBase10, rgbToHex, base10ToBase16 } = require('../exercises.js')
 
 describe('excersises tests', () => {
     test('excersise 1 hexToRGB', () => {
@@ -50,5 +50,7 @@ describe('excersises tests', () => {
     test('base10ToBase16 works', () => {
         const expectation = 'FF';
         const actual = base10ToBase16(255);
+        expect(actual).toEqual(expectation);
+
     });
 });
