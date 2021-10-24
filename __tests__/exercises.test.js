@@ -70,4 +70,10 @@ describe('excersises tests', () => {
         const actual2 = singleDigitB10ToB16(10);
         expect(actual2).toEqual(expectation2);
     });
+
+    test('exercise 3 list of characters', async () => {
+        const actual = await getCharacters();
+        //no idea if this actual works.
+        expect(actual).toEqual(expect.arrayContainer([expect.any(Object)]));
+    });
 });
