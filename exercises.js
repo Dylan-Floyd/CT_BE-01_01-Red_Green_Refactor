@@ -98,6 +98,9 @@ function singleDigitB10ToB16(b10) {
 }
 
 function base10ToBase16(base10) {
+    const digit1 = singleDigitB10ToB16(Math.floor(base10/16));
+    const digit2 = singleDigitB10ToB16(base10%16);
+    return `${digit1}${digit2}`;
 }
 
 function rgbToHex(rgbObj) {
