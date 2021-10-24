@@ -23,8 +23,8 @@ function base16ToBase10(base16String) {
 function hexToRGB(rgbString) {
     return {
         red: base16ToBase10(rgbString.slice(0, 2)),
-        green: 0,
-        blue: 0
+        green: base16ToBase10(rgbString.slice(2, 4)),
+        blue: base16ToBase10(rgbString.slice(4, 6))
     }
 }
 

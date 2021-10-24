@@ -11,7 +11,7 @@ describe('excersises tests', () => {
         expect(actual).toEqual(expectation);
 
         const expectation2 = {
-            red: 150,
+            red: 240,
             green: 255,
             blue: 10
         };
