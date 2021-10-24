@@ -42,7 +42,59 @@ const red = rgbToHex({ r: 255, g: 0, b: 0 });
 console.log(red); // prints #FF0000
 */
 function singleDigitB10ToB16(b10) {
-    return 'F'
+    let b16 = '';
+    //There's probably a better way to do this but I didn't want to google it this time
+    switch(b10) {
+        case 0:
+            b16 = '0';
+            break;
+        case 1:
+            b16 = '1';
+            break;
+        case 2:
+            b16 = '2';
+            break;
+        case 3:
+            b16 = '3';
+            break;
+        case 4:
+            b16 = '4';
+            break;
+        case 5:
+            b16 = '5';
+            break;
+        case 6:
+            b16 = '6';
+            break;
+        case 7:
+            b16 = '7';
+            break;
+        case 8:
+            b16 = '8';
+            break;
+        case 9:
+            b16 = '9';
+            break;
+        case 10:
+            b16 = 'A';
+            break;
+        case 11:
+            b16 = 'B';
+            break;
+        case 12:
+            b16 = 'C';
+            break;
+        case 13:
+            b16 = 'D';
+            break;
+        case 14:
+            b16 = 'E';
+            break;
+        case 15:
+            b16 = 'F';
+            break;
+    }
+    return b16;
 }
 
 function base10ToBase16(base10) {
