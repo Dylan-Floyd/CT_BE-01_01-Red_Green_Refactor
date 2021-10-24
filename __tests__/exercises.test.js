@@ -36,5 +36,14 @@ describe('excersises tests', () => {
             g: 0,
             b: 0
         });
+        expect(actual).toEqual(expectation)
+
+        const expectation2 = '#F0FF0A';
+        const actual2 = rgbToHex({
+            r: 240,
+            g: 255,
+            b: 10
+        });
+        expect(actual2).toEqual(expectation2);
     });
 });
