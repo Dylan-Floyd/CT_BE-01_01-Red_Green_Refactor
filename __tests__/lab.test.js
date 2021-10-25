@@ -1,5 +1,7 @@
 import { jest } from '@jest/globals';
-import { getName, copyAndPush } from '../lab.js';
+import { getName,
+    copyAndPush,
+    capitalizeAndFilter } from '../lab.js';
 
 describe('lab tests', () => {
     test('getName works', () => {
@@ -29,4 +31,11 @@ describe('lab tests', () => {
         expect(actual).toEqual(expected);
         expect(numbers).toEqual(duplicate);
     });
+
+    test('capitalizeAndFilter', () => {
+        const strings = ['apple', 'banana', 'fuji apple'];
+        const expected = ['APPLE', 'BANANA'];
+        const actual = capitalizeAndFilter(strings);
+        expect(actual).toEqual(expected);
+    })
 });
