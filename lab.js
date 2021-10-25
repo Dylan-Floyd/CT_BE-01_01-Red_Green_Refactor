@@ -1,4 +1,4 @@
 export function getName(obj) {
-    const { name } = obj;
+    const [ { name } ] = arguments;
     return name;
 }
