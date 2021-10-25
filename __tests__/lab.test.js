@@ -23,8 +23,10 @@ describe('lab tests', () => {
 
     test('copyAndPush', () => {
         const numbers = [1, 2, 3];
+        const duplicate = [...numbers];
         const expected = [1, 2, 3, 4];
         const actual = copyAndPush(numbers, 4);
         expect(actual).toEqual(expected);
-    })
+        expect(numbers).toEqual(duplicate);
+    });
 });

@@ -4,6 +4,6 @@ export function getName(obj) {
 }
 
 export function copyAndPush(arr, number) {
-    arr.push(number);
-    return arr;
+    const result = [...arr, number];
+    return result;
 }
