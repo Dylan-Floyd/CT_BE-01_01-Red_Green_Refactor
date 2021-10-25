@@ -1,7 +1,8 @@
 import { jest } from '@jest/globals';
 import { getName,
     copyAndPush,
-    capitalizeAndFilter } from '../lab.js';
+    capitalizeAndFilter,
+    getQuote } from '../lab.js';
 
 describe('lab tests', () => {
     test('getName works', () => {
@@ -37,5 +38,15 @@ describe('lab tests', () => {
         const expected = ['APPLE', 'BANANA'];
         const actual = capitalizeAndFilter(strings);
         expect(actual).toEqual(expected);
-    })
+    });
+
+    test('getQuote', () => {
+        const expected = {
+            name: expect.any(String),
+            text: expect.any(String),
+            image: expect.any(String)
+        }
+        const actual = getQuote();
+        expect(actual).toEqual(expected);
+    });
 });
