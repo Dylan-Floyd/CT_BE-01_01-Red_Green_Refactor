@@ -40,13 +40,13 @@ describe('lab tests', () => {
         expect(actual).toEqual(expected);
     });
 
-    test('getQuote', () => {
+    test('getQuote', async () => {
         const expected = {
             name: expect.any(String),
             text: expect.any(String),
             image: expect.any(String)
         }
-        const actual = getQuote();
+        const actual = await getQuote();
         expect(actual).toEqual(expected);
     });
 });
