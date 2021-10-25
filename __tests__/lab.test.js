@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import { getName } from '../lab.js';
+import { getName, copyAndPush } from '../lab.js';
 
 describe('lab tests', () => {
     test('getName works', () => {
@@ -20,4 +20,11 @@ describe('lab tests', () => {
         const actual2 = getName(data2);
         expect(actual2).toEqual(expected2);
     });
+
+    test('copyAndPush', () => {
+        const numbers = [1, 2, 3];
+        const expected = [1, 2, 3, 4];
+        const actual = copyAndPush(numbers, 4);
+        expect(actual).toEqual(expected);
+    })
 });
