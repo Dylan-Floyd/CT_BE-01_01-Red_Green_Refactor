@@ -1,4 +1,5 @@
 import { jest } from '@jest/globals';
+import { getName } from '../lab.js';
 
 describe('lab tests', () => {
     test('getName works', () => {
